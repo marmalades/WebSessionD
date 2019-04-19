@@ -62,7 +62,27 @@ public class GuynesMysql
                               result2.getString("VendId"));
           }
 
-         
+         // replace the following SELECT with the 3rd QUERY and name it sqlStatement3
+         String sqlStatement3 =
+                 "SELECT Products.ProdName FROM Products " ;
+
+         // name the results from the query result2
+         ResultSet result3 = stmt.executeQuery(sqlStatement3);
+         System.out.println("                                    ");
+         System.out.println("following is the output from result3");
+         while (result3.next())
+         {
+            // REPLACE THE FOLLOWING CODE WITH THE CORRECT FORMATS AND DATA NAMES FROM YOUR QUERY
+            System.out.printf("%10s\n",
+                    result3.getString("ProdName"));
+         }
+
+
+
+
+
+
+
          
          
 // LEAVE THE REST OF THE CODE ALONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

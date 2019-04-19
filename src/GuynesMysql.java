@@ -5,7 +5,8 @@
 
 // you must name the class your LAST NAME with Mysql - for example -  GuynesMysql
 // and the name of the java program to match - for example GuynesMysql.java
- 
+
+//Scanner?
 import java.util.Scanner;
 import java.sql.*;
 public class GuynesMysql

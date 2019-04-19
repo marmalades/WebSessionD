@@ -66,7 +66,7 @@ public class GuynesMysql
          String sqlStatement3 =
                  "SELECT Products.ProdName FROM Products " ;
 
-         // name the results from the query result2
+         // name the results from the query result3
          ResultSet result3 = stmt.executeQuery(sqlStatement3);
          System.out.println("                                    ");
          System.out.println("following is the output from result3");
@@ -75,6 +75,23 @@ public class GuynesMysql
             // REPLACE THE FOLLOWING CODE WITH THE CORRECT FORMATS AND DATA NAMES FROM YOUR QUERY
             System.out.printf("%10s\n",
                     result3.getString("ProdName"));
+         }
+
+
+
+
+         String sqlStatement4 =
+                 "SELECT ProdName FROM Products order by ProdName" ;
+
+         // name the results from the query result4
+         ResultSet result4 = stmt.executeQuery(sqlStatement4);
+         System.out.println("                                    ");
+         System.out.println("following is the output from result4");
+         while (result4.next())
+         {
+            // REPLACE THE FOLLOWING CODE WITH THE CORRECT FORMATS AND DATA NAMES FROM YOUR QUERY
+            System.out.printf("%10s\n",
+                    result4.getString("ProdName"));
          }
 
 

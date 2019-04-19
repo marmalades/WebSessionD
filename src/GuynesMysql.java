@@ -146,6 +146,24 @@ public class GuynesMysql
          }
 
 
+         //C H A P T E R  6
+
+         String sqlStatement8 =
+                 "SELECT ProdName FROM Products WHERE ProdName = 'fuses'";
+
+         // name the results from the query result8
+         ResultSet result8 = stmt.executeQuery(sqlStatement8);
+         System.out.println("                                    ");
+         System.out.println("following is the output from result88");
+         while (result8.next())
+         {
+            //REPLACE THE FOLLOWING CODE WITH THE CORRECT FORMATS AND DATA NAMES FROM YOUR QUERY
+            System.out.printf("%25s %25s\n",
+                    result8.getString("ProdName"),
+                    result8.getString("ProdPrice"));
+         }
+
+
 
          
          

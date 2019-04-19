@@ -25,10 +25,11 @@ public class GuynesMysql
 
 
 
- 
-         // replace the following SELECT with the 1ST QUERY and name it sqlStatement1 
+         //PAGE 30
+
+         // replace the following SELECT with the 1ST QUERY and name it sqlStatement1
          String sqlStatement1 =
-            "SELECT VendID from Vendors" ;
+            "SELECT ProdId, ProdName, ProdPrice FROM Products" ;
                    
          // name the results from the query result1
          ResultSet result1 = stmt.executeQuery(sqlStatement1);
@@ -36,17 +37,19 @@ public class GuynesMysql
          System.out.println("following is the output from result1");
          while (result1.next())
          {
-         // REPLACE THE FOLLOWING CODE WITH THE CORRECT FORMATS AND DATA NAMES FROM YOUR QUERY
-            System.out.printf("%50s\n",
-                              result1.getString("VendID"));
-          }
+            //REPLACE THE FOLLOWING CODE WITH THE CORRECT FORMATS AND DATA NAMES FROM YOUR QUERY
+            System.out.printf("%25s %25s %25s\n",
+                    result1.getString("ProdId"),
+                    result1.getString("ProdName"),
+                    result1.getString("ProdPrice"));
+         }
 
 
 
 
           // replace the following SELECT with the 2ND QUERY and name it sqlStatement2
          String sqlStatement2 =
-            "SELECT ProdId, ProdPrice FROM Products " ;
+            "SELECT VendId FROM Products " ;
                    
          // name the results from the query result2
          ResultSet result2 = stmt.executeQuery(sqlStatement2);
@@ -55,9 +58,8 @@ public class GuynesMysql
          while (result2.next())
          {
          // REPLACE THE FOLLOWING CODE WITH THE CORRECT FORMATS AND DATA NAMES FROM YOUR QUERY
-            System.out.printf("%10s %8.2f\n",
-                              result2.getString("ProdId"),
-                              result2.getDouble("ProdPrice"));                          
+            System.out.printf("%10s\n",
+                              result2.getString("VendId"));
           }
 
          

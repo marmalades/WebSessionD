@@ -28,7 +28,7 @@ public class GuynesMysql
  
          // replace the following SELECT with the 1ST QUERY and name it sqlStatement1 
          String sqlStatement1 =
-            "SELECT COUNT(*) AS num_item, MIN(prodprice) AS price_min, MAX(prodprice) AS price_max, AVG(prodprice) AS price_avg FROM products" ;
+            "SELECT VendID from Vendors" ;
                    
          // name the results from the query result1
          ResultSet result1 = stmt.executeQuery(sqlStatement1);
@@ -37,11 +37,8 @@ public class GuynesMysql
          while (result1.next())
          {
          // REPLACE THE FOLLOWING CODE WITH THE CORRECT FORMATS AND DATA NAMES FROM YOUR QUERY
-            System.out.printf("%25s %25s %25s %25s\n",
-                              result1.getString("num_item"),
-                              result1.getString("price_min"),
-                              result1.getString("price_max"),
-                              result1.getString("price_avg"));                      
+            System.out.printf("%50s\n",
+                              result1.getString("VendID"));
           }
 
 

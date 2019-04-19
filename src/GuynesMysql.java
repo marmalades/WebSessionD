@@ -111,6 +111,23 @@ public class GuynesMysql
          }
 
 
+         String sqlStatement6 =
+                 "SELECT ProdId, ProdPrice, ProdName FROM Products ORDER BY ProdPrice DESC";
+
+         // name the results from the query result6
+         ResultSet result6 = stmt.executeQuery(sqlStatement6);
+         System.out.println("                                    ");
+         System.out.println("following is the output from result6");
+         while (result6.next())
+         {
+            //REPLACE THE FOLLOWING CODE WITH THE CORRECT FORMATS AND DATA NAMES FROM YOUR QUERY
+            System.out.printf("%25s %25s %25s\n",
+                    result6.getString("ProdId"),
+                    result6.getString("ProdPrice"),
+                    result6.getString("ProdName"));
+         }
+
+
 
 
 
